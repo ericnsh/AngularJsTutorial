@@ -17,6 +17,9 @@ eventsApp.factory('eventData',function($resource){
         save : function(event){
             event.id = 999; //Hardcoded ID : BAD AF
             return resource.save(event);
+        },
+        getAllEvents : function(){
+            return resource.query();
         }
     };
 });
