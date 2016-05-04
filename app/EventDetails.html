@@ -22,7 +22,7 @@
             <img ng-src="{{event.imageUrl}}" alt="{{event.name}}"></img>
             <div class="row">
                 <div class="spann11">
-                    <h2>{{event.name}}</h2>
+                    <h2>{{event.name | uppercase }}</h2>
                 </div>
             </div>
             
@@ -30,6 +30,7 @@
                 <div class="span3">
                     <div> <strong>Date : </strong> {{event.date}}</div>
                     <div> <strong>Time : </strong> {{event.time}}</div>
+                    <div> <strong>Price : </strong> {{event.price | currency }}</div>
                 </div>
                 
                 <div class="span4">

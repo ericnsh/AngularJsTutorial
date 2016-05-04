@@ -5,6 +5,7 @@ eventsApp.controller('EventController', function($scope){
         name : 'Angular Boot Camp',
         date : '3/5/2016',
         time : '10:30',
+        price : 34,
         location :{
             address : '863 Monseigneur Grandin',
             city : 'Quebec',
