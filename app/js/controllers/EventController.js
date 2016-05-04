@@ -2,7 +2,9 @@
 
 eventsApp.controller('EventController', function($scope, eventData){
     
-    $scope.event = eventData.event;
+    eventData.getEvent(function(event){
+        $scope.event = event;
+    });
     
     $scope.upVoteSession = function(session){
         session.upVoteCount++;
