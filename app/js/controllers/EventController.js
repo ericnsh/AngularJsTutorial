@@ -2,9 +2,9 @@
 
 eventsApp.controller('EventController', 
 
-    function EventController($scope, eventData, $anchorScroll){
+    function EventController($scope, eventData, $routeParams){
             
-        eventData.getEvent()
+        eventData.getEvent($routeParams.eventId)
             .$promise
             .then(function(event){ $scope.event = event;})
             .catch(function(response){ console.log(response);})
@@ -16,9 +16,5 @@ eventsApp.controller('EventController',
         $scope.downVoteSession = function(session){
             session.upVoteCount--;
         };    
-        
-        $scope.scrollToSession = function(){
-            $anchorScroll();
-        }
     }
 );
