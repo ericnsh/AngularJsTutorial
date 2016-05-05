@@ -2,7 +2,7 @@
 
 eventsApp.controller('EventController', 
 
-    function EventController($scope, eventData, $routeParams){
+    function EventController($scope, eventData, $routeParams, $route){
             
         eventData.getEvent($routeParams.eventId)
             .$promise
@@ -15,6 +15,10 @@ eventsApp.controller('EventController',
         
         $scope.downVoteSession = function(session){
             session.upVoteCount--;
-        };    
+        }; 
+        
+        $scope.reload = function(){
+            $route.reload();
+        }   
     }
 );
